@@ -1,0 +1,105 @@
+.login__root {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	background: rgb(138, 0, 0);
+	background: linear-gradient(
+		0deg,
+		rgba(138, 0, 0, 1) 0%,
+		rgba(231, 0, 0, 1) 100%
+	);
+}
+header img {
+	width: 12.5rem;
+	height: 12.5rem;
+}
+
+form {
+	padding: 50px 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: space-between;
+	gap: 1.9rem;
+}
+
+.form_inputs {
+	display: flex;
+	flex-direction: column;
+	color: white;
+	font-weight: 300;
+	font-size: 1.25rem;
+	gap: 0.4rem;
+}
+
+.form_inputs input {
+	all: unset;
+	border-bottom: 1px solid white;
+	font-weight: 500;
+	padding: 0.625rem;
+}
+
+.form_inputs input::placeholder {
+	color: var(--lightGrey);
+	filter: opacity(0.7);
+	font-size: 1.25rem;
+	font-weight: 300;
+}
+
+.form_inputs input:focus {
+	background-color: hsla(0, 0%, 0%, 0.068);
+}
+
+.form__rememberMeCheck {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: start;
+	color: white;
+	gap: 15px;
+}
+.form__rememberMeCheck label {
+	font-weight: 200;
+}
+#rememberLogin {
+	width: 24px;
+	height: 24px;
+}
+#rememberLogin:checked {
+	accent-color: white;
+	outline-offset: 3px;
+	outline-color: white;
+	outline-width: 2px;
+	outline-style: solid;
+	border-radius: 6px;
+}
+button {
+	all: unset;
+	margin-top: 30px;
+	width: 100%;
+	height: 50px;
+	background-color: transparent;
+	border-radius: 24px;
+	border: 1px solid white;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+button:hover {
+	transform: scale(1.05);
+	filter: opacity(0.8);
+	background-color: white;
+	color: var(--red);
+	font-weight: bold;
+}
+
+.invalidCredentials {
+	font-size: 20px;
+	font-weight: 500;
+	color: white;
+}

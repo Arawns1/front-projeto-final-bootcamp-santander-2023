@@ -1,0 +1,45 @@
+<div class="login__root">
+	<header>
+		<img
+			src="../../../assets/Banco_Santander_Logotipo.svg"
+			alt="Logo santander"
+		/>
+	</header>
+	<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+		<div class="form_inputs">
+			<label for="cpfInput">CPF</label>
+			<input
+				type="text"
+				title="Digite o CPF no formato xxx.xxx.xxx-xx"
+				maxlength="11"
+				placeholder="Digite seu CPF"
+				name="cpfInput"
+				id="cpfInput"
+				required
+				formControlName="login"
+			/>
+		</div>
+
+		<div class="form_inputs">
+			<label for="passwordInput">Senha</label>
+			<input
+				type="password"
+				name="passwordInput"
+				id="passwordInput"
+				placeholder="Digite sua senha"
+				required
+				formControlName="password"
+			/>
+		</div>
+
+		<div class="form__rememberMeCheck">
+			<label for="rememberLogin">Lembrar credenciais</label>
+			<input type="checkbox" name="rememberLogin" id="rememberLogin" />
+		</div>
+		<button type="submit">Entrar</button>
+	</form>
+
+	<div *ngIf="isCredentialInvalid" class="invalidCredentials">
+		<p>Credenciais Inválidas. Tente novamente!</p>
+	</div>
+</div>
