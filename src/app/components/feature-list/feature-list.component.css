@@ -1,0 +1,8 @@
+.feature-list__wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	list-style: none;
+}

@@ -1,0 +1,20 @@
+.header__wrapper {
+	background-color: var(--red);
+	display: flex;
+	width: 100%;
+	height: 10vh;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.8rem;
+}
+
+.header__wrapper .icon {
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+.header__wrapper .logo {
+	width: 150px;
+	height: 95%;
+}

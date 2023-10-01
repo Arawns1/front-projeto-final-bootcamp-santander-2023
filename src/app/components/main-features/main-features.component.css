@@ -1,0 +1,8 @@
+.main-features__wrapper {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 3vh;
+	transform: translateY(-45px);
+}
