@@ -1,11 +1,5 @@
 <ul class="feature-list__wrapper">
-	<li>
-		<feature-card></feature-card>
-	</li>
-	<li>
-		<feature-card></feature-card>
-	</li>
-	<li>
-		<feature-card></feature-card>
+	<li *ngFor="let feature of featureList">
+		<feature-card [feature]="feature"></feature-card>
 	</li>
 </ul>

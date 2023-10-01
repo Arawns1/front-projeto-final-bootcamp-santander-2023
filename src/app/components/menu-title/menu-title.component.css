@@ -12,6 +12,7 @@
 
 .menu-title__name {
 	font-weight: 300;
+	text-transform: capitalize;
 }
 
 .menu-title__account-details {

@@ -1,5 +1,5 @@
 <select class="card-list__wrapper">
-	<option>Cartão final 0000</option>
-	<option>Cartão final 0001</option>
-	<option>Cartão final 0002</option>
+	<option *ngFor="let cardFinal of cardsList">
+		Cartão final {{ cardFinal.finalNumber }}
+	</option>
 </select>

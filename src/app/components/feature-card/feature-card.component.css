@@ -8,6 +8,8 @@
 	align-items: center;
 	justify-content: space-around;
 	padding: 0.8rem;
+	cursor: pointer;
+	scroll-snap-align: start;
 }
 .feature-card_icon {
 	width: 30px;
@@ -15,4 +17,5 @@
 }
 .feature-card_title {
 	color: var(--lightGrey);
+	text-transform: capitalize;
 }

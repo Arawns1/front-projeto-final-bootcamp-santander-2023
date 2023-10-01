@@ -6,17 +6,19 @@ import { CardsListComponent } from '../cards-list/cards-list.component';
 import { NewsCardComponent } from '../news-card/news-card.component';
 import { BalanceCardComponent } from '../balance-card/balance-card.component';
 import { LucideAngularModule, ChevronUp } from 'lucide-angular';
+import { NewsListComponent } from '../news-list/news-list.component';
+import { NewsListModule } from '../news-list/news-list.module';
 
 @NgModule({
 	declarations: [
 		MainFeaturesComponent,
 		BalanceCardComponent,
 		CardsListComponent,
-		NewsCardComponent,
 	],
 	imports: [
 		CommonModule,
 		FeatureListModule,
+		NewsListModule,
 		LucideAngularModule.pick({ ChevronUp }),
 	],
 	exports: [MainFeaturesComponent],

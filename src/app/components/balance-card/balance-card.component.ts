@@ -5,4 +5,7 @@ import { Component } from '@angular/core';
 	templateUrl: './balance-card.component.html',
 	styleUrls: ['./balance-card.component.css'],
 })
-export class BalanceCardComponent {}
+export class BalanceCardComponent {
+	balance: number = 9324.64;
+	balanceWithLimit: number = 4324.64;
+}

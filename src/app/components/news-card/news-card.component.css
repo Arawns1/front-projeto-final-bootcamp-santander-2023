@@ -1,5 +1,5 @@
 .news-card__wrapper {
-	width: 100%;
+	width: 80vw;
 	height: 15vh;
 	display: flex;
 	flex-direction: row;
@@ -9,6 +9,7 @@
 	border-radius: 0.375rem;
 	box-shadow: 0rem 0.25rem 0.5625rem 0rem rgba(0, 0, 0, 0.15);
 	padding: 1.125rem 1.875rem;
+	scroll-snap-align: start;
 }
 .news-icon {
 	width: 3.5rem;

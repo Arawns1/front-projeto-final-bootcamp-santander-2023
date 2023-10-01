@@ -1,21 +1,21 @@
-.feature-list__wrapper {
-	width: 100%;
-	padding: 10px 5px;
+.news-list__wrapper {
 	display: flex;
 	flex-direction: row;
-	gap: 20px;
-	align-items: flex-start;
+	align-items: center;
+	justify-content: start;
+	gap: 1.5rem;
+	padding: 0.825rem;
 	list-style: none;
 	overflow: scroll;
 	scroll-snap-type: mandatory;
-	scroll-snap-points-x: repeat(4rem);
+	scroll-snap-points-x: repeat(300px);
 	scroll-snap-type: x mandatory;
 }
 
-.feature-list__wrapper::-webkit-scrollbar {
+.news-list__wrapper::-webkit-scrollbar {
 	display: none;
 }
-.feature-list__wrapper {
+.news-list__wrapper {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 }
