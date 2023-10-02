@@ -34,7 +34,12 @@
 
 		<div class="form__rememberMeCheck">
 			<label for="rememberLogin">Lembrar credenciais</label>
-			<input type="checkbox" name="rememberLogin" id="rememberLogin" />
+			<input
+				type="checkbox"
+				name="rememberLogin"
+				id="rememberLogin"
+				(change)="handleCheckBox($event)"
+			/>
 		</div>
 		<button type="submit">Entrar</button>
 	</form>

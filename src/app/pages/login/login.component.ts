@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { loginData } from '../../model/loginDataModel';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 @Component({
 	selector: 'app-login',
 	templateUrl: './login.component.html',
@@ -10,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 	isCredentialInvalid: boolean = false;
+	isRememberChecked: boolean = false;
 
 	loginForm = this.formBuilder.group({
 		login: '',
@@ -22,17 +24,21 @@ export class LoginComponent {
 		private router: Router
 	) {}
 
+	handleCheckBox(event: any) {
+		this.isRememberChecked = event.target.checked;
+	}
+
 	onSubmit(): void {
 		let data: any = this.loginForm.value;
-		data.login && data.password
-			? this.loginService.fetchLogin(data).subscribe((data) => {
-					if (data.token != null && data.token != undefined) {
-						this.loginService.autorizar(data.token);
-						this.router.navigate(['/home']);
-					} else {
-						this.isCredentialInvalid = true;
-					}
-			  })
-			: (this.isCredentialInvalid = true);
+		this.loginService.fetchLogin(data).subscribe({
+			next: (data) => {
+				this.isCredentialInvalid = false;
+				this.loginService.autorizar(data, this.isRememberChecked);
+				this.router.navigate(['/home']);
+			},
+			error: (err) => {
+				this.isCredentialInvalid = true;
+			},
+		});
 	}
 }

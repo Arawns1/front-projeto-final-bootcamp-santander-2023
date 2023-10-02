@@ -8,8 +8,9 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { MainFeaturesModule } from './components/main-features/main-features.module';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthInterceptor } from './services/auth.interceptor';
 
 @NgModule({
 	declarations: [
@@ -28,7 +29,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 		ReactiveFormsModule,
 		LucideAngularModule.pick({ Menu, Bell }),
 	],
-	providers: [],
+	providers: [
+		{
+			provide: HTTP_INTERCEPTORS,
+			useClass: AuthInterceptor,
+			multi: true,
+		},
+	],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}
