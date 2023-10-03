@@ -28,6 +28,11 @@ export class Account {
 	get getLimit(): number {
 		return this.limit;
 	}
+
+	get BalancePlusLimit(): number {
+		return this.limit + this.balance;
+	}
+
 	get getNumber(): number {
 		return this.number;
 	}

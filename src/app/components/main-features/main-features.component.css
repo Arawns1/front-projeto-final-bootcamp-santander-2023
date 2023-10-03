@@ -4,5 +4,5 @@
 	display: flex;
 	flex-direction: column;
 	gap: 3vh;
-	transform: translateY(-45px);
+	transform: translateY(-2rem);
 }

@@ -19,7 +19,6 @@ export class HomeComponent {
 		this.accountService.fetchAccount().subscribe({
 			next: (data) => {
 				this.accountService.setAccount(data);
-				console.log(this.accountService.getAccount());
 			},
 			error: (err) => {
 				alert(
