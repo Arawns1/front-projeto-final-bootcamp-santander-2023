@@ -11,6 +11,7 @@
 		rgba(138, 0, 0, 1) 0%,
 		rgba(231, 0, 0, 1) 100%
 	);
+	position: relative;
 }
 header img {
 	width: 12.5rem;
@@ -18,7 +19,7 @@ header img {
 }
 
 form {
-	padding: 50px 0px;
+	padding: 20px 0px;
 	display: flex;
 	flex-direction: column;
 	align-items: start;
@@ -102,4 +103,21 @@ button:hover {
 	font-size: 20px;
 	font-weight: 500;
 	color: white;
+}
+
+footer {
+	color: white;
+	position: absolute;
+	bottom: 0;
+	background-color: #181818;
+	width: 100%;
+	padding: 1.25rem;
+	text-align: center;
+}
+
+footer a {
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+	font-weight: 800;
 }

@@ -1,7 +1,9 @@
+import { MatDialog } from '@angular/material/dialog';
 import { LoginService } from './../../services/login.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from 'src/app/services/account.service';
+import { SidenavService } from 'src/app/services/sidenav.service';
 
 @Component({
 	selector: 'app-home',
@@ -9,13 +11,17 @@ import { AccountService } from 'src/app/services/account.service';
 	styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+	isFetchCompleted: boolean = false;
+
 	constructor(
 		private accountService: AccountService,
 		private router: Router,
-		private loginService: LoginService
+		private loginService: LoginService,
+		public sideNavService: SidenavService
 	) {}
 
 	ngOnInit() {
+		this.isFetchCompleted = false;
 		this.accountService.fetchAccount().subscribe({
 			next: (data) => {
 				this.accountService.setAccount(data);
@@ -28,6 +34,9 @@ export class HomeComponent {
 				this.router.navigate(['']);
 			},
 		});
+		setTimeout(() => {
+			this.isFetchCompleted = true;
+		}, 15000);
 	}
 
 	getAccount() {

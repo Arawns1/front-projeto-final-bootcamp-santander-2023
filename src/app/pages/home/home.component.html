@@ -1,3 +1,22 @@
 <menu-bar></menu-bar>
-<menu-title [account]="getAccount()"></menu-title>
-<main-features></main-features>
+
+<mat-sidenav-container>
+	<mat-sidenav [(opened)]="sideNavService.opened" mode="over">
+		<logout-item></logout-item>
+	</mat-sidenav>
+	<mat-sidenav-content>
+		<ng-container *ngIf="!isFetchCompleted; else mainContent">
+			<div class="loaderContainer">
+				<img
+					src="../../../assets/loader.webp"
+					alt="Loader"
+					class="loaderContainer__loader"
+				/>
+			</div>
+		</ng-container>
+		<ng-template #mainContent>
+			<menu-title [account]="getAccount()"></menu-title>
+			<main-features></main-features>
+		</ng-template>
+	</mat-sidenav-content>
+</mat-sidenav-container>

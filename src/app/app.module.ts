@@ -1,4 +1,4 @@
-import { LucideAngularModule, Menu, Bell, ChevronUp } from 'lucide-angular';
+import { LucideAngularModule, Menu, Bell, LogOut } from 'lucide-angular';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,7 +11,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './services/auth.interceptor';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LogoutItemComponent } from './components/logout-item/logout-item.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -19,6 +22,7 @@ import { AuthInterceptor } from './services/auth.interceptor';
 		MenuBarComponent,
 		LoginComponent,
 		HomeComponent,
+		LogoutItemComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -27,7 +31,10 @@ import { AuthInterceptor } from './services/auth.interceptor';
 		MainFeaturesModule,
 		FormsModule,
 		ReactiveFormsModule,
-		LucideAngularModule.pick({ Menu, Bell }),
+		LucideAngularModule.pick({ Menu, Bell, LogOut }),
+		BrowserAnimationsModule,
+		MatSidenavModule,
+		MatDialogModule,
 	],
 	providers: [
 		{

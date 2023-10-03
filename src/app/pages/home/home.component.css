@@ -1,0 +1,21 @@
+mat-sidenav-container {
+	height: calc(205vh - 115vh);
+	position: relative;
+}
+
+mat-sidenav {
+	width: 200px;
+	background-color: aliceblue;
+}
+
+.loaderContainer {
+	min-width: 100%;
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.loaderContainer__loader {
+	width: 150px;
+	height: 150px;
+}

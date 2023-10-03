@@ -1,0 +1,27 @@
+.logo {
+	width: 80%;
+	margin: auto;
+	padding: 20px;
+}
+.logo img {
+	width: 100%;
+	object-fit: contain;
+}
+
+.logout-icon {
+	color: white;
+}
+.logout-item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	color: white;
+	width: 100%;
+	padding: 5px;
+	background-color: rgb(189, 34, 34);
+	position: absolute;
+	bottom: 0%;
+	cursor: pointer;
+}
