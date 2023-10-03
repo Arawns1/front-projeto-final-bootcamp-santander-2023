@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Account } from 'src/app/model/accountModel';
 
 @Component({
 	selector: 'balance-card',
@@ -6,6 +7,5 @@ import { Component } from '@angular/core';
 	styleUrls: ['./balance-card.component.css'],
 })
 export class BalanceCardComponent {
-	balance: number = 9324.64;
-	balanceWithLimit: number = 4324.64;
+	@Input() account: Account = new Account();
 }

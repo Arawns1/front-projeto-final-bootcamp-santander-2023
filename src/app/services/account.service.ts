@@ -28,4 +28,8 @@ export class AccountService {
 			data.client.name
 		);
 	}
+
+	getAccount() {
+		return this.account;
+	}
 }

@@ -23,6 +23,7 @@ export class LoginService {
 
 	deslogar() {
 		localStorage.removeItem('userToken');
+		sessionStorage.removeItem('userToken');
 	}
 	obterLoginStatus = () =>
 		!!localStorage.getItem('userToken') ||

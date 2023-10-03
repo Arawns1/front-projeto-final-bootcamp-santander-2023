@@ -1,9 +1,9 @@
 export class Account {
-	agency?: string;
-	balance?: number;
-	limit?: number;
-	number?: number;
-	name?: string;
+	agency: string;
+	balance: number;
+	limit: number;
+	number: number;
+	name: string;
 
 	constructor(
 		agency: string = '0',
@@ -19,19 +19,19 @@ export class Account {
 		this.name = name;
 	}
 
-	get getAgency() {
+	get getAgency(): string {
 		return this.agency;
 	}
-	get getBalance() {
+	get getBalance(): number {
 		return this.balance;
 	}
-	get getLimit() {
+	get getLimit(): number {
 		return this.limit;
 	}
-	get getNumber() {
+	get getNumber(): number {
 		return this.number;
 	}
-	get getName() {
+	get getName(): string {
 		return this.name;
 	}
 

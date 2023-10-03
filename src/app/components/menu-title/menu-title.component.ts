@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Account } from 'src/app/model/accountModel';
 
 @Component({
 	selector: 'menu-title',
@@ -6,7 +7,5 @@ import { Component } from '@angular/core';
 	styleUrls: ['./menu-title.component.css'],
 })
 export class MenuTitleComponent {
-	owner: string = 'Gabriel';
-	agency: string = '0001';
-	accountNumber: string = '000000000-1';
+	@Input() account: Account = new Account();
 }

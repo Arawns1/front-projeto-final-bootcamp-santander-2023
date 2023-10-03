@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Card } from 'src/app/model/cardModel';
+import { CardService } from 'src/app/services/card.service';
 
 @Component({
 	selector: 'cards-list',
@@ -7,18 +8,22 @@ import { Card } from 'src/app/model/cardModel';
 	styleUrls: ['./cards-list.component.css'],
 })
 export class CardsListComponent {
-	cardsList: Array<Card> = [
-		{
-			id: 1,
-			finalNumber: '0001',
-		},
-		{
-			id: 2,
-			finalNumber: '1002',
-		},
-		{
-			id: 3,
-			finalNumber: '2003',
-		},
-	];
+	constructor(private cardService: CardService) {}
+
+	cardsList: Array<Card> = [];
+
+	ngOnInit() {
+		this.cardService.fetchCards().subscribe({
+			next: (res: []) => {
+				res.forEach((data: Card) => {
+					this.cardsList.push(
+						new Card(data.id, data.number, data.type, data.limit)
+					);
+				});
+			},
+			error: (err) => {
+				console.error(err);
+			},
+		});
+	}
 }

@@ -24,6 +24,12 @@ export class LoginComponent {
 		private router: Router
 	) {}
 
+	ngOnInit() {
+		this.loginService.obterLoginStatus()
+			? this.router.navigate(['/home'])
+			: null;
+	}
+
 	handleCheckBox(event: any) {
 		this.isRememberChecked = event.target.checked;
 	}

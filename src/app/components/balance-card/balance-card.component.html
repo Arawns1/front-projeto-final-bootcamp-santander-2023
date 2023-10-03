@@ -13,9 +13,9 @@
 	</div>
 
 	<div class="card-balance">
-		<h2 class="card-balance__balance">R$ {{ balance }}</h2>
+		<h2 class="card-balance__balance">R$ {{ account.getBalance }}</h2>
 		<span class="card-balance__limit"
-			>Saldo + Limite: R$ {{ balanceWithLimit }}</span
+			>Saldo + Limite: R$ {{ account.getBalance + account.getLimit }}</span
 		>
 	</div>
 
