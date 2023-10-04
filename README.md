@@ -16,6 +16,8 @@
 
 O principal objetivo deste projeto foi aprofundar meus conhecimentos no angular, realizando requisições externas e controlando rotas
 
+> <i>O link para o Backend você pode encontrar [aqui](https://github.com/Arawns1/projeto-final-santander-dev-week-2023)</i>
+
 # 📸 Visuais e Telas
 [Gif de Exemplo](https://github.com/Arawns1/front-projeto-final-bootcamp-santander-2023/assets/62900084/22ee43a1-4741-4a08-87fd-d915a95f48c9)
 
