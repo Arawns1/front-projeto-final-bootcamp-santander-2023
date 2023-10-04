@@ -22,6 +22,7 @@ export class HomeComponent {
 
 	ngOnInit() {
 		this.isFetchCompleted = false;
+		this.sideNavService.opened = false;
 		this.accountService.fetchAccount().subscribe({
 			next: (data) => {
 				this.accountService.setAccount(data);
@@ -36,7 +37,7 @@ export class HomeComponent {
 		});
 		setTimeout(() => {
 			this.isFetchCompleted = true;
-		}, 15000);
+		}, 2500);
 	}
 
 	getAccount() {
